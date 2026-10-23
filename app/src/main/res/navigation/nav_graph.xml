@@ -12,10 +12,14 @@
         tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_addTenantFragment"
-            app:destination="@id/addTenantFragment" />
+            app:destination="@id/addTenantFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_dashboardFragment_to_viewTenantsFragment"
-            app:destination="@id/viewTenantsFragment" />
+            app:destination="@id/viewTenantsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -25,7 +29,10 @@
         tools:layout="@layout/fragment_add_tenant">
         <action
             android:id="@+id/action_addTenantFragment_to_viewTenantsFragment"
-            app:destination="@id/viewTenantsFragment" />
+            app:destination="@id/viewTenantsFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
